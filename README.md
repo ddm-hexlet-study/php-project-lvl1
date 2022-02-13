@@ -7,4 +7,5 @@ ASCIINEMA first
 https://asciinema.org/a/iwjV1ub49N7bZzg7d95iB9prT
 ASCIINEMA second
 https://asciinema.org/a/xKPasCH0ilA0Wyy5ndRi7Y664
--
+ASCIINEMA third
+https://asciinema.org/a/2Av2U91EzKc5ZZYZuv3KwtC3L
