@@ -18,8 +18,14 @@ function findParity(string $name)
         $num = random_int($lowLimit, $upLimit);
         line('Question: %s', $num);
         $answer = getAnswer();
-        $controlAnswer = ($num % 2 === 0) ? 'yes' : 'no';
-        $result = checkAnswer($answer, $controlAnswer, $name);
+        if ($answer === 'yes') {
+            $intAnswer = 1;
+        }
+        if ($answer === 'no') {
+            $intAnswer = 0;
+        }
+        $controlAnswer = ($num % 2 === 0) ? '1' : '0';
+        $result = checkAnswer($intAnswer, $controlAnswer, $name);
         if ($result === false) {
             return $result;
         }

@@ -23,9 +23,15 @@ function isPrime(string $name)
                 $isNumberPrime = false;
             }
         }
-        $controlAnswer = ($isNumberPrime === true) ? 'yes' : 'no';
+        $controlAnswer = ($isNumberPrime === true) ? '1' : '0';
         $answer = getAnswer();
-        $result = checkAnswer($answer, $controlAnswer, $name);
+        if ($answer === 'yes') {
+            $intAnswer = 1;
+        }
+        if ($answer === 'no') {
+            $intAnswer = 0;
+        }
+        $result = checkAnswer($intAnswer, $controlAnswer, $name);
         if ($result === false) {
             return $result;
         }

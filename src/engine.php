@@ -21,7 +21,7 @@ function getAnswer()
     $invitation = 'Your answer';
     return prompt($invitation);
 }
-function checkAnswer($answer, $controlAnswer, $name)
+function checkAnswer(int $answer, int $controlAnswer, string $name)
 {
     if ($answer === $controlAnswer) {
         line('Correct!');
