@@ -25,12 +25,12 @@ function gcdCalc(string $name)
                 $controlAnswer = $i;
             }
         }
-        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
+        $result = checkAnswer($answer, $controlAnswer, $name);
         if ($result === false) {
             return $result;
         }
     }
-    return $result;
+    return $result ?? false;
 }
 function startGameGcd()
 {

@@ -25,12 +25,12 @@ function isPrime(string $name)
         }
         $controlAnswer = ($isNumberPrime === true) ? 'yes' : 'no';
         $answer = getAnswer();
-        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
+        $result = checkAnswer($answer, $controlAnswer, $name);
         if ($result === false) {
             return $result;
         }
     }
-    return $result;
+    return $result ?? false;
 }
 function startGamePrime()
 {

@@ -27,12 +27,12 @@ function findMissing(string $name)
         $progressionStr = implode(' ', $progressionArr);
         line('Question: %s', $progressionStr);
         $answer = (int) getAnswer();
-        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
+        $result = checkAnswer($answer, $controlAnswer, $name);
         if ($result === false) {
             return $result;
         }
     }
-    return $result;
+    return $result ?? false;
 }
 function startGameProgression()
 {

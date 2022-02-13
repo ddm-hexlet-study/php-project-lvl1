@@ -33,12 +33,12 @@ function calculate(string $name)
                 $controlAnswer = $num1 * $num2;
                 break;
         }
-        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
+        $result = checkAnswer($answer, $controlAnswer, $name);
         if ($result === false) {
             return $result;
         }
     }
-    return $result;
+    return $result ?? false;
 }
 function startGameCalc()
 {

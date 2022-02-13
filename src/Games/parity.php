@@ -19,12 +19,12 @@ function findParity(string $name)
         line('Question: %s', $num);
         $answer = getAnswer();
         $controlAnswer = ($num % 2 === 0) ? 'yes' : 'no';
-        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
+        $result = checkAnswer($answer, $controlAnswer, $name);
         if ($result === false) {
             return $result;
         }
     }
-    return $result;
+    return $result ?? false;
 }
 function startGamePatiry()
 {
