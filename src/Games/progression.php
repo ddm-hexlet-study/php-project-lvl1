@@ -10,7 +10,7 @@ use function Brain\Games\Engine\getAnswer;
 use function Brain\Games\Engine\checkAnswer;
 
 const TASK = 'What number is missing in the progression?';
-function findMissing($name)
+function findMissing(string $name)
 {
     $lowLimit = 1;
     $upLimit = 10;
@@ -27,7 +27,7 @@ function findMissing($name)
         $progressionStr = implode(' ', $progressionArr);
         line('Question: %s', $progressionStr);
         $answer = (int) getAnswer();
-        $result = checkAnswer($answer, $controlAnswer, $name);
+        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
         if ($result === false) {
             return $result;
         }

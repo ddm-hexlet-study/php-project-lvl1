@@ -10,7 +10,7 @@ use function Brain\Games\Engine\getAnswer;
 use function Brain\Games\Engine\checkAnswer;
 
 const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-function isPrime($name)
+function isPrime(string $name)
 {
     $lowLimit = 1;
     $upLimit = 100;
@@ -25,7 +25,7 @@ function isPrime($name)
         }
         $controlAnswer = ($isNumberPrime === true) ? 'yes' : 'no';
         $answer = getAnswer();
-        $result = checkAnswer($answer, $controlAnswer, $name);
+        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
         if ($result === false) {
             return $result;
         }

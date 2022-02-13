@@ -10,7 +10,7 @@ use function Brain\Games\Engine\getAnswer;
 use function Brain\Games\Engine\checkAnswer;
 
 const TASK = 'Find the greatest common divisor of given numbers.';
-function gcdCalc($name)
+function gcdCalc(string $name)
 {
     $lowLimit = 1;
     $upLimit = 100;
@@ -25,7 +25,7 @@ function gcdCalc($name)
                 $controlAnswer = $i;
             }
         }
-        $result = checkAnswer($answer, $controlAnswer, $name);
+        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
         if ($result === false) {
             return $result;
         }

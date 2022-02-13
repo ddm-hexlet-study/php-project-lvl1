@@ -10,7 +10,7 @@ use function Brain\Games\Engine\getAnswer;
 use function Brain\Games\Engine\checkAnswer;
 
 const TASK = 'What is the result of the expression?';
-function calculate($name)
+function calculate(string $name)
 {
     $lowLimit = 1;
     $upLimit = 20;
@@ -33,7 +33,7 @@ function calculate($name)
                 $controlAnswer = $num1 * $num2;
                 break;
         }
-        $result = checkAnswer($answer, $controlAnswer, $name);
+        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
         if ($result === false) {
             return $result;
         }

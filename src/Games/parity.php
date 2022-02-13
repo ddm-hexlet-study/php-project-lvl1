@@ -10,7 +10,7 @@ use function Brain\Games\Engine\getAnswer;
 use function Brain\Games\Engine\checkAnswer;
 
 const TASK = 'Answer "yes" if the number is even, otherwise answer "no".';
-function findParity($name)
+function findParity(string $name)
 {
     $lowLimit = 1;
     $upLimit = 100;
@@ -19,7 +19,7 @@ function findParity($name)
         line('Question: %s', $num);
         $answer = getAnswer();
         $controlAnswer = ($num % 2 === 0) ? 'yes' : 'no';
-        $result = checkAnswer($answer, $controlAnswer, $name);
+        $result = checkAnswer($answer, $controlAnswer, $name) ?? false;
         if ($result === false) {
             return $result;
         }
