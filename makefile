@@ -10,6 +10,8 @@ brain-gcd: #запуск игры НОД
 	./bin/brain-calc
 brain-progression: #запуск игры прогрессия
 	./bin/brain-progression
+brain-prime: #запуск игры простое число
+	./bin/brain-prime
 validate: #проверка валидности пакета
 	composer validate
 lint: #запуск phpcs
