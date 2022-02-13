@@ -30,6 +30,7 @@ function isPrime($name)
             return $result;
         }
     }
+    return $result;
 }
 function startGamePrime()
 {

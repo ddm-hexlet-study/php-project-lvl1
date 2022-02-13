@@ -38,6 +38,7 @@ function calculate($name)
             return $result;
         }
     }
+    return $result;
 }
 function startGameCalc()
 {

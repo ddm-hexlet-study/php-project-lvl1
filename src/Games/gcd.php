@@ -30,6 +30,7 @@ function gcdCalc($name)
             return $result;
         }
     }
+    return $result;
 }
 function startGameGcd()
 {

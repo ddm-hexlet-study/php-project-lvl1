@@ -24,6 +24,7 @@ function findParity($name)
             return $result;
         }
     }
+    return $result;
 }
 function startGamePatiry()
 {

@@ -32,6 +32,7 @@ function findMissing($name)
             return $result;
         }
     }
+    return $result;
 }
 function startGameProgression()
 {
