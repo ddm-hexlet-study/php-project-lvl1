@@ -9,3 +9,5 @@ ASCIINEMA second
 https://asciinema.org/a/xKPasCH0ilA0Wyy5ndRi7Y664
 ASCIINEMA third
 https://asciinema.org/a/2Av2U91EzKc5ZZYZuv3KwtC3L
+ASCIINEMA fourth
+https://asciinema.org/a/BywWIjOfnAHtE9JrcpZBJeRoT
