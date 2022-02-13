@@ -5,18 +5,18 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'ff3ccd3588642f44944f757b465d5fd1bff21af8',
-        'name' => 'hexlet/code',
+        'reference' => '5db5acba2c84b5e60c6d905a36b5a694dd729e3e',
+        'name' => 'ddm14159/firstgame',
         'dev' => true,
     ),
     'versions' => array(
-        'hexlet/code' => array(
+        'ddm14159/firstgame' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'ff3ccd3588642f44944f757b465d5fd1bff21af8',
+            'reference' => '5db5acba2c84b5e60c6d905a36b5a694dd729e3e',
             'dev_requirement' => false,
         ),
         'squizlabs/php_codesniffer' => array(

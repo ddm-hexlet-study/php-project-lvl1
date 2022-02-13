@@ -7,4 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'be01b9b16925dcb22165c40b46681ac6' => $vendorDir . '/wp-cli/php-cli-tools/lib/cli/cli.php',
+    '0dd783fd8d44a1f195f5adbd94601e45' => $baseDir . '/src/engine.php',
+    'c94a3b86473f9e077e20fb931c975030' => $baseDir . '/src/Games/parity.php',
+    'dd9021eb4617b69a73fbc4bcd5035ee4' => $baseDir . '/src/Games/calc.php',
 );
