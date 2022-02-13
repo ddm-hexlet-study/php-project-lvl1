@@ -20,7 +20,8 @@ function gcdCalc(string $name)
         line('Question: %s %s', $num1, $num2);
         $answer = (int) getAnswer();
         $limit = $num1 >= $num2 ? $num2 : $num1;
-        for ($i = 1, $controlAnswer = 1; $i <= $limit; $i++) {
+        $controlAnswer = 1;
+        for ($i = 1; $i <= $limit; $i++) {
             if (($num1 % $i === 0) && ($num2 % $i === 0)) {
                 $controlAnswer = $i;
             }
