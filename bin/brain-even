@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+    require_once __DIR__ . '/../src/parity.php';
+    require_once __DIR__ . '/../vendor/autoload.php';
+    use function \Brain\Games\Parity\greeting;
+    use function \Brain\Games\Parity\findParity;
+
+    $name = greeting();
+    findParity($name);
