@@ -8,6 +8,8 @@ brain-calc: #запуск игры калькулятор
 	./bin/brain-calc
 brain-gcd: #запуск игры НОД
 	./bin/brain-calc
+brain-progression: #запуск игры прогрессия
+	./bin/brain-progression
 validate: #проверка валидности пакета
 	composer validate
 lint: #запуск phpcs
