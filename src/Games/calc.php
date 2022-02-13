@@ -22,7 +22,6 @@ function calculate(string $name)
         $expression = "{$num1} {$sign} {$num2}";
         line('Question: %s', $expression);
         $answer = (int) getAnswer();
-        $controlAnswer = null;
         switch ($sign) {
             case '+':
                 $controlAnswer = $num1 + $num2;
@@ -33,6 +32,8 @@ function calculate(string $name)
             case '*':
                 $controlAnswer = $num1 * $num2;
                 break;
+            default:
+                $controlAnswer = $answer - 1;
         }
         $result = checkAnswer($answer, $controlAnswer, $name);
         if ($result === false) {
