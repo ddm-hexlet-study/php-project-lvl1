@@ -46,6 +46,6 @@ function startGameCalc()
     printTask(TASK);
     $result = calculate($name);
     if ($result === true) {
-        line('Congratulations, %s', $name);
+        line('Congratulations, %s!', $name);
     }
 }

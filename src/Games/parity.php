@@ -32,6 +32,6 @@ function startGamePatiry()
     printTask(TASK);
     $result = findParity($name);
     if ($result === true) {
-        line('Congratulations, %s', $name);
+        line('Congratulations, %s!', $name);
     }
 }

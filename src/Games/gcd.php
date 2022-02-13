@@ -38,6 +38,6 @@ function startGameGcd()
     printTask(TASK);
     $result = gcdCalc($name);
     if ($result === true) {
-        line('Congratulations, %s', $name);
+        line('Congratulations, %s!', $name);
     }
 }

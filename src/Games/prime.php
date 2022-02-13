@@ -38,6 +38,6 @@ function startGamePrime()
     printTask(TASK);
     $result = isPrime($name);
     if ($result === true) {
-        line('Congratulations, %s', $name);
+        line('Congratulations, %s!', $name);
     }
 }
