@@ -23,12 +23,11 @@ function isPrime(string $name)
                 $isNumberPrime = false;
             }
         }
-        $controlAnswer = ($isNumberPrime === true) ? '1' : '0';
+        $controlAnswer = ($isNumberPrime === true) ? 1 : 0;
         $answer = getAnswer();
         if ($answer === 'yes') {
             $intAnswer = 1;
-        }
-        if ($answer === 'no') {
+        } else {
             $intAnswer = 0;
         }
         $result = checkAnswer($intAnswer, $controlAnswer, $name);

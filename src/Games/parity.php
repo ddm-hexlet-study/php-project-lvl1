@@ -20,11 +20,10 @@ function findParity(string $name)
         $answer = getAnswer();
         if ($answer === 'yes') {
             $intAnswer = 1;
-        }
-        if ($answer === 'no') {
+        } else {
             $intAnswer = 0;
         }
-        $controlAnswer = ($num % 2 === 0) ? '1' : '0';
+        $controlAnswer = ($num % 2 === 0) ? 1 : 0;
         $result = checkAnswer($intAnswer, $controlAnswer, $name);
         if ($result === false) {
             return $result;
