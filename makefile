@@ -6,6 +6,8 @@ brain-even: #запуск игры на четность
 	./bin/brain-even
 brain-calc: #запуск игры калькулятор
 	./bin/brain-calc
+brain-gcd: #запуск игры НОД
+	./bin/brain-calc
 validate: #проверка валидности пакета
 	composer validate
 lint: #запуск phpcs
