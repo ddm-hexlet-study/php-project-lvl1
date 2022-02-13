@@ -8,12 +8,13 @@ class ComposerStaticInitf496cb28debbb9665f7a9b36e222f610
 {
     public static $files = array (
         'be01b9b16925dcb22165c40b46681ac6' => __DIR__ . '/..' . '/wp-cli/php-cli-tools/lib/cli/cli.php',
-        '0dd783fd8d44a1f195f5adbd94601e45' => __DIR__ . '/../..' . '/src/engine.php',
-        'c94a3b86473f9e077e20fb931c975030' => __DIR__ . '/../..' . '/src/Games/parity.php',
-        'dd9021eb4617b69a73fbc4bcd5035ee4' => __DIR__ . '/../..' . '/src/Games/calc.php',
-        '9cc0f6556e1f18c206ffc980524c0d7b' => __DIR__ . '/../..' . '/src/Games/gcd.php',
-        '97d7f86305e0cb9a1c140664890bc4be' => __DIR__ . '/../..' . '/src/Games/progression.php',
-        '6e7ad2b76978ab354b8553be9f3c9c37' => __DIR__ . '/../..' . '/src/Games/prime.php',
+        '59e8673f37572714dafd4b885705f03a' => __DIR__ . '/../..' . '/src/engine.php',
+        '756f1e52cc45528fbed59c01a86fda0e' => __DIR__ . '/../..' . '/src/Games/parity.php',
+        '0e3e4ebe0bac134b7e3514ed61b79220' => __DIR__ . '/../..' . '/src/Games/calc.php',
+        '14251c0c2f1445a6ba4ba738e8256ba4' => __DIR__ . '/../..' . '/src/Games/gcd.php',
+        'ef6088ad362e584cbccc0b7a6d763561' => __DIR__ . '/../..' . '/src/Games/progression.php',
+        '8070774bb7d5c6ba47f55dd21ff8f47c' => __DIR__ . '/../..' . '/src/Games/prime.php',
+        '4829b2fddb6a054e51fbedd69dcbc605' => __DIR__ . '/../..' . '/src/Cli.php',
     );
 
     public static $prefixesPsr0 = array (
