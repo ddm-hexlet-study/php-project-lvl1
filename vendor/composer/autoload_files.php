@@ -8,10 +8,11 @@ $baseDir = dirname($vendorDir);
 return array(
     'be01b9b16925dcb22165c40b46681ac6' => $vendorDir . '/wp-cli/php-cli-tools/lib/cli/cli.php',
     '59e8673f37572714dafd4b885705f03a' => $baseDir . '/src/engine.php',
-    '756f1e52cc45528fbed59c01a86fda0e' => $baseDir . '/src/Games/parity.php',
+    '3c79fa35e876685cd91eee40e6ae497a' => $baseDir . '/src/Games/even.php',
     '0e3e4ebe0bac134b7e3514ed61b79220' => $baseDir . '/src/Games/calc.php',
     '14251c0c2f1445a6ba4ba738e8256ba4' => $baseDir . '/src/Games/gcd.php',
     'ef6088ad362e584cbccc0b7a6d763561' => $baseDir . '/src/Games/progression.php',
     '8070774bb7d5c6ba47f55dd21ff8f47c' => $baseDir . '/src/Games/prime.php',
     '4829b2fddb6a054e51fbedd69dcbc605' => $baseDir . '/src/Cli.php',
+    '67cec3d8955d6710ae25092550e5ef2e' => $baseDir . '/src/funcLib.php',
 );
