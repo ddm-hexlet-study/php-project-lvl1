@@ -20,11 +20,6 @@ function isPrime()
         }
     }
     $answer = getAnswer();
-    if ($answer !== 'yes' && $answer !== 'no') {
-        $correctAnswerType = 0;
-    } else {
-        $correctAnswerType = 1;
-    }
     $controlAnswer = ($isNumberPrime === true) ? 'yes' : 'no';
     return checkAnswerStr($answer, $controlAnswer);
 }
