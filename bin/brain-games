@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
-    require_once __DIR__ . '/../vendor/autoload.php';
-    use function \Brain\Games\Cli\greeting;
 
-    greeting();
+require_once __DIR__ . '/../vendor/autoload.php';
+use function \Brain\Games\Cli\greeting;
+
+greeting();
