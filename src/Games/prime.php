@@ -5,7 +5,7 @@ namespace Brain\Games\Prime;
 use function cli\line;
 use function cli\prompt;
 use function Brain\Games\FuncLib\getAnswer;
-use function Brain\Games\FuncLib\checkAnswer;
+use function Brain\Games\FuncLib\checkAnswerStr;
 
 function isPrime()
 {
@@ -19,14 +19,12 @@ function isPrime()
             $isNumberPrime = false;
         }
     }
-    $controlAnswer = ($isNumberPrime === true) ? 'yes' : 'no';
     $answer = getAnswer();
-    if ($answer === $controlAnswer) {
-        $result['check'] = 'true';
+    if ($answer !== 'yes' && $answer !== 'no') {
+        $correctAnswerType = 0;
     } else {
-        $result['check'] = 'false';
-        $result['answer'] = $answer;
-        $result['control'] = $controlAnswer;
+        $correctAnswerType = 1;
     }
-    return checkAnswer($answer, $controlAnswer);
+    $controlAnswer = ($isNumberPrime === true) ? 'yes' : 'no';
+    return checkAnswerStr($answer, $controlAnswer);
 }

@@ -31,7 +31,19 @@ function getAnswer()
     $invitation = 'Your answer';
     return prompt($invitation);
 }
-function checkAnswer($answer, $controlAnswer)
+function checkAnswer(int $answer, int $controlAnswer)
+{
+    $result = [];
+    if ($answer === $controlAnswer) {
+        $result['check'] = 'true';
+    } else {
+        $result['check'] = 'false';
+        $result['answer'] = $answer;
+        $result['control'] = $controlAnswer;
+    }
+    return $result;
+}
+function checkAnswerStr(string $answer, string $controlAnswer)
 {
     $result = [];
     if ($answer === $controlAnswer) {

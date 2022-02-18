@@ -5,7 +5,7 @@ namespace Brain\Games\Even;
 use function cli\line;
 use function cli\prompt;
 use function Brain\Games\FuncLib\getAnswer;
-use function Brain\Games\FuncLib\checkAnswer;
+use function Brain\Games\FuncLib\checkAnswerStr;
 
 function findParity()
 {
@@ -16,5 +16,5 @@ function findParity()
     line('Question: %s', $num);
     $answer = getAnswer();
     $controlAnswer = ($num % 2 === 0) ? 'yes' : 'no';
-    return checkAnswer($answer, $controlAnswer);
+    return checkAnswerStr($answer, $controlAnswer);
 }
