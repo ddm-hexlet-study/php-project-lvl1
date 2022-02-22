@@ -14,13 +14,13 @@
 - (dev) squizlabs/php_codesniffer: 3.*<br /><br /><br />
 
 ## Installation<br />
-- composer global require ddm14159/firstgame<br /><br /><br />
+- `composer global require ddm14159/firstgame`<br /><br /><br />
 ## Usage<br />
-1. Parity check - brain-even<br />
-2. Calculator - brain-calc<br />
-3. Greatest common divisor - brain-gcd<br />
-4. Arithmetic progression - brain-progression<br />
-5. Prime number - brain-prime<br /><br /><br /><br /><br />
+- Parity check - `brain-even`<br />
+- Calculator - `brain-calc`<br />
+- Greatest common divisor - `brain-gcd`<br />
+- Arithmetic progression - `brain-progression`<br />
+- Prime number - `brain-prime`<br /><br /><br /><br /><br />
 
 
 
