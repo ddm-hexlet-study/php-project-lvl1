@@ -6,10 +6,11 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-      - name: Linter Test
+      - name: install dependencies
         uses: shivammathur/setup-php@v2
         with:
                 php-version: '8.1'
                 tools: phpcs, phpunit
+      - name: Linter Test
       - run: |
           make lint
