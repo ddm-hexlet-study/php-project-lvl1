@@ -13,7 +13,7 @@ function generateDataGcd()
     for ($i = 0; $i < $numberOfGames; $i++) {
         $num1 = random_int($lowLimit, $upLimit);
         $num2 = random_int($lowLimit, $upLimit);
-        $result[$i]['question'] = "Question: {$num1}, {$num2}";
+        $result[$i]['question'] = "Question: {$num1} {$num2}";
         $limit = $num1 >= $num2 ? $num2 : $num1;
         $result[$i]['controlAnswer'] = 1;
         for ($j = 1; $j <= $limit; $j++) {
