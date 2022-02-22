@@ -26,8 +26,6 @@ function generateDataCalc()
             case '*':
                 $result[$i]['controlAnswer'] = $num1 * $num2;
                 break;
-            default:
-                $result[$i]['controlAnswer'] = $answer - 1;
         }
     }
     return $result;
