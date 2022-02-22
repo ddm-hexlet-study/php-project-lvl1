@@ -2,20 +2,20 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 <img src="https://github.com/ddm14159/php-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg" /><br /><br />
 
-#Console games project<br />
+# Console games project<br />
 - Parity check<br />
 - Calculator<br />
 - Greatest common divisor<br />
 - Arithmetic progression<br />
 - Prime number<br /><br /><br />
 
-##Requires 
+## Requires 
 - wp-cli/php-cli-tools: ^0.11.13<br />
 - (dev) squizlabs/php_codesniffer: 3.*<br /><br /><br />
 
-##Installation<br />
+## Installation<br />
 - composer global require ddm14159/firstgame<br /><br /><br />
-##Usage<br />
+## Usage<br />
 1. Parity check - brain-even<br />
 2. Calculator - brain-calc<br />
 3. Greatest common divisor - brain-gcd<br />
