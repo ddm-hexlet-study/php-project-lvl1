@@ -16,8 +16,7 @@
             "src/Games/gcd.php",
             "src/Games/progression.php",
             "src/Games/prime.php",
-            "src/Cli.php",
-            "src/funcLib.php"
+            "src/Cli.php"
         ]
     },
     "bin": [

@@ -2,24 +2,32 @@
 
 namespace Brain\Games\Prime;
 
-use function cli\line;
-use function cli\prompt;
-use function Brain\Games\FuncLib\getAnswer;
-use function Brain\Games\FuncLib\checkAnswerStr;
+use function Brain\Games\Engine\startGame;
 
-function isPrime()
+function generateDataPrime()
 {
+    $numberOfGames = 3;
+    $result = [];
     $lowLimit = 1;
     $upLimit = 100;
-    $number = random_int($lowLimit, $upLimit);
-    line('Question: %s', $number);
-    $isNumberPrime = true;
-    for ($i = 2; $i < $number; $i++) {
-        if ($number % $i === 0) {
-            $isNumberPrime = false;
+    $num = random_int($lowLimit, $upLimit);
+    for ($i = 0; $i < $numberOfGames; $i++) {
+        $num = random_int($lowLimit, $upLimit);
+        $isNumberPrime = true;
+        for ($j = 2; $j < $num; $j++) {
+            if ($num % $j === 0) {
+                $isNumberPrime = false;
+            }
         }
+        $result[$i]['question'] = "Question: {$num}";
+        $result[$i]['controlAnswer'] = ($isNumberPrime === true) ? 'yes' : 'no';
     }
-    $answer = getAnswer();
-    $controlAnswer = ($isNumberPrime === true) ? 'yes' : 'no';
-    return checkAnswerStr($answer, $controlAnswer);
+    return $result;
+}
+function startGamePrime()
+{
+    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $data = generateDataPrime();
+    startGame($description, $data);
+    return;
 }

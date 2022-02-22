@@ -2,25 +2,32 @@
 
 namespace Brain\Games\Gcd;
 
-use function cli\line;
-use function cli\prompt;
-use function Brain\Games\FuncLib\getAnswer;
-use function Brain\Games\FuncLib\checkAnswer;
+use function Brain\Games\Engine\startGame;
 
-function gcdCalc()
+function generateDataGcd()
 {
+    $numberOfGames = 3;
+    $result = [];
     $lowLimit = 1;
     $upLimit = 100;
-    $num1 = random_int($lowLimit, $upLimit);
-    $num2 = random_int($lowLimit, $upLimit);
-    line('Question: %s %s', $num1, $num2);
-    $answer = (int) getAnswer();
-    $limit = $num1 >= $num2 ? $num2 : $num1;
-    $controlAnswer = 1;
-    for ($i = 1; $i <= $limit; $i++) {
-        if (($num1 % $i === 0) && ($num2 % $i === 0)) {
-            $controlAnswer = $i;
+    for ($i = 0; $i < $numberOfGames; $i++) {
+        $num1 = random_int($lowLimit, $upLimit);
+        $num2 = random_int($lowLimit, $upLimit);
+        $result[$i]['question'] = "Question: {$num1}, {$num2}";
+        $limit = $num1 >= $num2 ? $num2 : $num1;
+        $result[$i]['controlAnswer'] = 1;
+        for ($j = 1; $j <= $limit; $j++) {
+            if (($num1 % $j === 0) && ($num2 % $j === 0)) {
+                $result[$i]['controlAnswer'] = $j;
+            }
         }
     }
-    return checkAnswer($answer, $controlAnswer);
+    return $result;
+}
+function startGameGcd()
+{
+    $description = 'Find the greatest common divisor of given numbers.';
+    $data = generateDataGcd();
+    startGame($description, $data);
+    return;
 }

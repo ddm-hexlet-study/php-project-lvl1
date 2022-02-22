@@ -2,26 +2,34 @@
 
 namespace Brain\Games\Progression;
 
-use function cli\line;
-use function cli\prompt;
-use function Brain\Games\FuncLib\getAnswer;
-use function Brain\Games\FuncLib\checkAnswer;
+use function Brain\Games\Engine\startGame;
 
-function findMissing()
+function generateDataProgression()
 {
+    $numberOfGames = 3;
+    $result = [];
     $lowLimit = 1;
     $upLimit = 10;
-    $progressionArr = [];
-    $randomOffset = random_int($lowLimit, $upLimit);
-    $step = random_int($lowLimit, $upLimit);
-    for ($i = 0, $k = $randomOffset; $i < 10; $i++, $k += $step) {
-        $progressionArr[] = $k;
+    $progressionLength = 10;
+    for ($i = 0; $i < $numberOfGames; $i++) {
+        $progressionArr = [];
+        $randomOffset = random_int($lowLimit, $upLimit);
+        $step = random_int($lowLimit, $upLimit);
+        for ($j = 0, $k = $randomOffset; $j < $progressionLength; $j++, $k += $step) {
+            $progressionArr[] = $k;
+        }
+        $controlIndex = array_rand($progressionArr);
+        $result[$i]['controlAnswer'] = $progressionArr[$controlIndex];
+        $progressionArr[$controlIndex] = "..";
+        $progressionStr = implode(' ', $progressionArr);
+        $result[$i]['question'] = "Question: {$progressionStr}";
     }
-    $controlIndex = array_rand($progressionArr);
-    $controlAnswer = $progressionArr[$controlIndex];
-    $progressionArr[$controlIndex] = "..";
-    $progressionStr = implode(' ', $progressionArr);
-    line('Question: %s', $progressionStr);
-    $answer = (int) getAnswer();
-    return checkAnswer($answer, $controlAnswer);
+    return $result;
+}
+function startGameProgression()
+{
+    $description = 'AnswWhat number is missing in the progression?';
+    $data = generateDataProgression();
+    startGame($description, $data);
+    return;
 }
