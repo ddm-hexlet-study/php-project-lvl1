@@ -12,5 +12,5 @@ jobs:
                 php-version: '8.1'
                 tools: phpcs, phpunit
       - name: Linter Test
-      - run: |
-          make lint
+        run: make lint
+          
