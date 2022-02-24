@@ -6,6 +6,7 @@ use function Brain\Games\Engine\startGame;
 
 function makeCalculation(int $num1, int $num2, string $sign)
 {
+    $result = 0;
     switch ($sign) {
         case '+':
             $result = $num1 + $num2;
