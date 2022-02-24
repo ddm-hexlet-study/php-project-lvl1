@@ -4,6 +4,21 @@ namespace Brain\Games\Calc;
 
 use function Brain\Games\Engine\startGame;
 
+function makeCalculation(int $num1, int $num2, string $sign)
+{
+    switch ($sign) {
+        case '+':
+            $result = $num1 + $num2;
+            break;
+        case '-':
+            $result = $num1 - $num2;
+            break;
+        case '*':
+            $result = $num1 * $num2;
+            break;
+    }
+    return $result;
+}
 function generateDataCalc()
 {
     $numberOfGames = 3;
@@ -16,21 +31,11 @@ function generateDataCalc()
         $num2 = random_int($lowLimit, $upLimit);
         $sign = $signArr[array_rand($signArr)];
         $result[$i]['question'] = "Question: {$num1} {$sign} {$num2}";
-        switch ($sign) {
-            case '+':
-                $result[$i]['controlAnswer'] = $num1 + $num2;
-                break;
-            case '-':
-                $result[$i]['controlAnswer'] = $num1 - $num2;
-                break;
-            case '*':
-                $result[$i]['controlAnswer'] = $num1 * $num2;
-                break;
-        }
+        $result[$i]['controlAnswer'] = makeCalculation($num1, $num2, $sign);
     }
     return $result;
 }
-function startGameCalc()
+function startCalc()
 {
     $description = 'What is the result of the expression?';
     $data = generateDataCalc();

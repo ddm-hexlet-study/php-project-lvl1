@@ -4,6 +4,17 @@ namespace Brain\Games\Gcd;
 
 use function Brain\Games\Engine\startGame;
 
+function findGcd(int $num1, int $num2)
+{
+    $result = 1;
+    $limit = $num1 >= $num2 ? $num2 : $num1;
+    for ($i = 1; $i <= $limit; $i++) {
+        if (($num1 % $i === 0) && ($num2 % $i === 0)) {
+            $result = $i;
+        }
+    }
+    return $result;
+}
 function generateDataGcd()
 {
     $numberOfGames = 3;
@@ -14,17 +25,11 @@ function generateDataGcd()
         $num1 = random_int($lowLimit, $upLimit);
         $num2 = random_int($lowLimit, $upLimit);
         $result[$i]['question'] = "Question: {$num1} {$num2}";
-        $limit = $num1 >= $num2 ? $num2 : $num1;
-        $result[$i]['controlAnswer'] = 1;
-        for ($j = 1; $j <= $limit; $j++) {
-            if (($num1 % $j === 0) && ($num2 % $j === 0)) {
-                $result[$i]['controlAnswer'] = $j;
-            }
-        }
+        $result[$i]['controlAnswer'] = findGcd($num1, $num2);
     }
     return $result;
 }
-function startGameGcd()
+function startGcd()
 {
     $description = 'Find the greatest common divisor of given numbers.';
     $data = generateDataGcd();

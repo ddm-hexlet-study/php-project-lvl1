@@ -26,9 +26,9 @@ function generateDataProgression()
     }
     return $result;
 }
-function startGameProgression()
+function startProgression()
 {
-    $description = 'AnswWhat number is missing in the progression?';
+    $description = 'What number is missing in the progression?';
     $data = generateDataProgression();
     startGame($description, $data);
     return;

@@ -2,6 +2,6 @@
 <?php
 
 require_once __DIR__ . '/../vendor/autoload.php';
-use function \Brain\Games\Calc\startGameCalc;
+use function \Brain\Games\Calc\startCalc;
 
-startGameCalc();
+startCalc();
