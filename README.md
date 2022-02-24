@@ -24,13 +24,14 @@
 
 
 
-ASCIINEMA Parity check<br />
-https://asciinema.org/a/iwjV1ub49N7bZzg7d95iB9prT<br />
-ASCIINEMA Calculator<br />
-https://asciinema.org/a/xKPasCH0ilA0Wyy5ndRi7Y664<br />
-ASCIINEMA Greatest common divisor<br />
-https://asciinema.org/a/2Av2U91EzKc5ZZYZuv3KwtC3L<br />
-ASCIINEMA Arithmetic progression<br />
-https://asciinema.org/a/BywWIjOfnAHtE9JrcpZBJeRoT<br />
-ASCIINEMA Prime number<br />
-https://asciinema.org/a/BvRHAf1s5FcTNGiVuh93xCD1t<br />
+## ASCIINEMA
+- Parity check<br />
+[![asciicast](https://asciinema.org/a/iwjV1ub49N7bZzg7d95iB9prT.svg)](https://asciinema.org/a/iwjV1ub49N7bZzg7d95iB9prT)<br />
+- Calculator<br />
+- [![asciicast](https://asciinema.org/a/xKPasCH0ilA0Wyy5ndRi7Y664.svg)](https://asciinema.org/a/xKPasCH0ilA0Wyy5ndRi7Y664)<br />
+- Greatest common divisor<br />
+- - [![asciicast](https://asciinema.org/a/2Av2U91EzKc5ZZYZuv3KwtC3L.svg)](https://asciinema.org/a/2Av2U91EzKc5ZZYZuv3KwtC3L)<br />
+- Arithmetic progression<br />
+- - [![asciicast](https://asciinema.org/a/BywWIjOfnAHtE9JrcpZBJeRoT.svg)](https://asciinema.org/a/BywWIjOfnAHtE9JrcpZBJeRoT)<br />
+- Prime number<br />
+- - [![asciicast](https://asciinema.org/a/BvRHAf1s5FcTNGiVuh93xCD1t.svg)](https://asciinema.org/a/BvRHAf1s5FcTNGiVuh93xCD1t)<br />
