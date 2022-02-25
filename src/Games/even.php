@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Even;
 
-use function Brain\Games\Engine\startGame;
+use Brain\Games\Engine;
 
 function isEven(int $num)
 {
@@ -10,22 +10,21 @@ function isEven(int $num)
 }
 function generateDataEven()
 {
-    $numberOfGames = 3;
     $result = [];
     $lowLimit = 1;
     $upLimit = 100;
     $num = random_int($lowLimit, $upLimit);
-    for ($i = 0; $i < $numberOfGames; $i++) {
-        $num = random_int($lowLimit, $upLimit);
-        $result[$i]['question'] = "Question: {$num}";
-        $result[$i]['controlAnswer'] = isEven($num) ? 'yes' : 'no';
-    }
+    $num = random_int($lowLimit, $upLimit);
+    $result['question'] = "Question: {$num}";
+    $result['controlAnswer'] = isEven($num) ? 'yes' : 'no';
     return $result;
 }
 function startEven()
 {
     $description = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $data = generateDataEven();
-    startGame($description, $data);
+    for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
+        $data[$i] = generateDataEven();
+    }
+    Engine\startGame($description, $data);
     return;
 }

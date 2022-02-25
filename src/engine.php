@@ -5,15 +5,17 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const NUMBER_OF_ROUNDS = 3;
+
 function startGame(string $description, array $data)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line('%s', $description);
-    foreach ($data as $key => $currentRoundData) {
-        $question = $currentRoundData['question'];
-        $controlAnswer = $currentRoundData['controlAnswer'];
+    for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
+        $question = $data[$i]['question'];
+        $controlAnswer = $data[$i]['controlAnswer'];
         line("%s", $question);
         $answer = prompt('Your answer');
         if ($answer != $controlAnswer) {
