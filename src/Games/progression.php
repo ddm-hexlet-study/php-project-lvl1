@@ -27,6 +27,7 @@ function generateDataProgression()
 function startProgression()
 {
     $description = 'What number is missing in the progression?';
+    $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateDataProgression();
     }

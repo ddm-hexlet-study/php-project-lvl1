@@ -36,6 +36,7 @@ function generateDataCalc()
 function startCalc()
 {
     $description = 'What is the result of the expression?';
+    $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateDataCalc();
     }

@@ -29,6 +29,7 @@ function generateDataGcd()
 function startGcd()
 {
     $description = 'Find the greatest common divisor of given numbers.';
+    $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateDataGcd();
     }

@@ -22,6 +22,7 @@ function generateDataEven()
 function startEven()
 {
     $description = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateDataEven();
     }

@@ -27,6 +27,7 @@ function generateDataPrime()
 function startPrime()
 {
     $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateDataPrime();
     }
