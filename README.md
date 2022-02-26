@@ -7,20 +7,20 @@
 - Calculator<br />
 - Greatest common divisor<br />
 - Arithmetic progression<br />
-- Prime number<br /><br /><br />
+- Prime number<br />
 
 ## Requires 
 - wp-cli/php-cli-tools: ^0.11.13<br />
-- (dev) squizlabs/php_codesniffer: 3.*<br /><br /><br />
+- (dev) squizlabs/php_codesniffer: 3.*<br />
 
 ## Installation<br />
-- `composer global require ddm14159/firstgame`<br /><br /><br />
+- `composer global require ddm14159/firstgame`<br />
 ## Usage<br />
 - Parity check - `brain-even`<br />
 - Calculator - `brain-calc`<br />
 - Greatest common divisor - `brain-gcd`<br />
 - Arithmetic progression - `brain-progression`<br />
-- Prime number - `brain-prime`<br /><br /><br /><br /><br />
+- Prime number - `brain-prime`<br /><br /><br />
 
 
 
