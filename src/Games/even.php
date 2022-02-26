@@ -9,7 +9,7 @@ const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 /**
  * Checks the parity of a number and returns bool.
  *
- * @param Int $num1 Number to check
+ * @param Int $num Number to check
  * @return Bool Result of the check
  */
 function isEven(int $num)
