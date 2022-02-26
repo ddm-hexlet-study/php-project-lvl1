@@ -4,11 +4,20 @@ namespace Brain\Games\Even;
 
 use Brain\Games\Engine;
 
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+/**
+ * Checks the parity of a number and returns bool.
+ *
+ * @param Int $num1 Number to check
+ * @return Bool Result of the check
+ */
 function isEven(int $num)
 {
     return $num % 2 === 0;
 }
-function generateDataEven()
+
+function generateData()
 {
     $result = [];
     $lowLimit = 1;
@@ -16,16 +25,16 @@ function generateDataEven()
     $num = random_int($lowLimit, $upLimit);
     $num = random_int($lowLimit, $upLimit);
     $result['question'] = "Question: {$num}";
-    $result['controlAnswer'] = isEven($num) ? 'yes' : 'no';
+    $result['correctAnswer'] = isEven($num) ? 'yes' : 'no';
     return $result;
 }
-function startEven()
+
+function start()
 {
-    $description = 'Answer "yes" if the number is even, otherwise answer "no".';
     $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
-        $data[$i] = generateDataEven();
+        $data[$i] = generateData();
     }
-    Engine\startGame($description, $data);
+    Engine\startGame(DESCRIPTION, $data);
     return;
 }

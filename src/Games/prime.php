@@ -4,6 +4,14 @@ namespace Brain\Games\Prime;
 
 use Brain\Games\Engine;
 
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+/**
+ * Checks if the given number is prime.
+ *
+ * @param Int $num1 Number to check
+ * @return Bool Result of the check
+ */
 function isPrime(int $num)
 {
     $isNumberPrime = true;
@@ -14,23 +22,24 @@ function isPrime(int $num)
     }
     return $isNumberPrime;
 }
-function generateDataPrime()
+
+function generateData()
 {
     $result = [];
     $lowLimit = 1;
     $upLimit = 100;
     $num = random_int($lowLimit, $upLimit);
     $result['question'] = "Question: {$num}";
-    $result['controlAnswer'] = isPrime($num) ? 'yes' : 'no';
+    $result['correctAnswer'] = isPrime($num) ? 'yes' : 'no';
     return $result;
 }
-function startPrime()
+
+function start()
 {
-    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
-        $data[$i] = generateDataPrime();
+        $data[$i] = generateData();
     }
-    Engine\startGame($description, $data);
+    Engine\startGame(DESCRIPTION, $data);
     return;
 }
