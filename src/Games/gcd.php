@@ -41,7 +41,7 @@ function start()
 {
     $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
-        $data[$i] = generateDataGcd();
+        $data[$i] = generateData();
     }
     Engine\startGame(DESCRIPTION, $data);
     return;
