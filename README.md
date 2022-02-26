@@ -20,7 +20,7 @@
 - Calculator - `brain-calc`<br />
 - Greatest common divisor - `brain-gcd`<br />
 - Arithmetic progression - `brain-progression`<br />
-- Prime number - `brain-prime`<br /><br /><br />
+- Prime number - `brain-prime`<br />
 
 
 
