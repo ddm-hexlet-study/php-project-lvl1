@@ -13,7 +13,7 @@ const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
  * @param Int $num2 Second number
  * @return Int Greatest common divisor
  */
-function findGcd(int $num1, int $num2)
+function findGcd(int $num1, int $num2): int
 {
     $result = 1;
     $limit = $num1 >= $num2 ? $num2 : $num1;
@@ -25,7 +25,12 @@ function findGcd(int $num1, int $num2)
     return $result;
 }
 
-function generateData()
+/**
+ * Generates array of questions and correct answers.
+ *
+ * @return Array Result of generating
+ */
+function generateData(): array
 {
     $result = [];
     $lowLimit = 1;
@@ -37,12 +42,14 @@ function generateData()
     return $result;
 }
 
-function start()
+/**
+ * Starts game.
+ */
+function start(): void
 {
     $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateData();
     }
     Engine\startGame(DESCRIPTION, $data);
-    return;
 }

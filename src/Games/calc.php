@@ -14,18 +14,23 @@ const DESCRIPTION = 'What is the result of the expression?';
  * @param String $sign Second number
  * @return Int Result of calculation
  */
-function makeCalculation(int $num1, int $num2, string $sign)
+function makeCalculation(int $num1, int $num2, string $sign): int
 {
     $result = match ($sign) {
         '+' => $num1 + $num2,
         '-' => $num1 - $num2,
         '*' => $num1 * $num2,
-        default => $num1,
+        default => throw new \Exception('Unexpected sign.'),
     };
     return $result;
 }
 
-function generateData()
+/**
+ * Generates array of questions and correct answers.
+ *
+ * @return Array Result of generating
+ */
+function generateData(): array
 {
     $result = [];
     $lowLimit = 1;
@@ -35,16 +40,24 @@ function generateData()
     $num2 = random_int($lowLimit, $upLimit);
     $sign = $signs[array_rand($signs)];
     $result['question'] = "Question: {$num1} {$sign} {$num2}";
-    $result['correctAnswer'] = makeCalculation($num1, $num2, $sign);
+    try {
+        $result['correctAnswer'] = makeCalculation($num1, $num2, $sign);
+    } catch (\Exception $e) {
+        echo "Exception thrown: " . $e->getMessage() . "\n";
+        die();
+    }
+    
     return $result;
 }
 
-function start()
+/**
+ * Starts game.
+ */
+function start(): void
 {
     $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateData();
     }
     Engine\startGame(DESCRIPTION, $data);
-    return;
 }

@@ -12,7 +12,7 @@ const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no
  * @param Int $num Number to check
  * @return Bool Result of the check
  */
-function isPrime(int $num)
+function isPrime(int $num): bool
 {
     $isNumberPrime = true;
     for ($i = 2; $i < $num; $i++) {
@@ -23,7 +23,12 @@ function isPrime(int $num)
     return $isNumberPrime;
 }
 
-function generateData()
+/**
+ * Generates array of questions and correct answers.
+ *
+ * @return Array Result of generating
+ */
+function generateData(): array
 {
     $result = [];
     $lowLimit = 1;
@@ -34,12 +39,14 @@ function generateData()
     return $result;
 }
 
-function start()
+/**
+ * Starts game.
+ */
+function start(): void
 {
     $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateData();
     }
     Engine\startGame(DESCRIPTION, $data);
-    return;
 }

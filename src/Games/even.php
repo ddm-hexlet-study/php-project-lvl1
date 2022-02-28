@@ -12,12 +12,17 @@ const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
  * @param Int $num Number to check
  * @return Bool Result of the check
  */
-function isEven(int $num)
+function isEven(int $num): bool
 {
     return $num % 2 === 0;
 }
 
-function generateData()
+/**
+ * Generates array of questions and correct answers.
+ *
+ * @return Array Result of generating
+ */
+function generateData(): array
 {
     $result = [];
     $lowLimit = 1;
@@ -29,12 +34,14 @@ function generateData()
     return $result;
 }
 
-function start()
+/**
+ * Starts game.
+ */
+function start(): void
 {
     $data = [];
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateData();
     }
     Engine\startGame(DESCRIPTION, $data);
-    return;
 }
