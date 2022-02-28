@@ -40,12 +40,7 @@ function generateData(): array
     $num2 = random_int($lowLimit, $upLimit);
     $sign = $signs[array_rand($signs)];
     $result['question'] = "Question: {$num1} {$sign} {$num2}";
-    try {
-        $result['correctAnswer'] = makeCalculation($num1, $num2, $sign);
-    } catch (\Exception $e) {
-        echo "Exception thrown: " . $e->getMessage() . "\n";
-        die();
-    }
+    $result['correctAnswer'] = makeCalculation($num1, $num2, $sign);
     return $result;
 }
 

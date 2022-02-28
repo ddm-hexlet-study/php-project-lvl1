@@ -7,7 +7,12 @@ use function cli\prompt;
 
 const NUMBER_OF_ROUNDS = 3;
 
-function startGame(string $description, array $data)
+/**
+ * The engine, that starts any game.
+ * @param String $description Description of the game
+ * @param Array $data Array of questions and correct answers
+ */
+function startGame(string $description, array $data): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -26,5 +31,4 @@ function startGame(string $description, array $data)
         line('Correct!');
     }
     line('Congratulations, %s!', $name);
-    return;
 }
