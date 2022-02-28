@@ -46,7 +46,6 @@ function generateData(): array
         echo "Exception thrown: " . $e->getMessage() . "\n";
         die();
     }
-    
     return $result;
 }
 
