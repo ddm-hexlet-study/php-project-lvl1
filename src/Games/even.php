@@ -29,7 +29,7 @@ function generateData(): array
     $upLimit = 100;
     $num = random_int($lowLimit, $upLimit);
     $num = random_int($lowLimit, $upLimit);
-    $result['question'] = "Question: {$num}";
+    $result['question'] = $num;
     $result['correctAnswer'] = isEven($num) ? 'yes' : 'no';
     return $result;
 }
@@ -43,5 +43,5 @@ function start(): void
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateData();
     }
-    Engine\startGame(DESCRIPTION, $data);
+    Engine\playGame(DESCRIPTION, $data);
 }

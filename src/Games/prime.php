@@ -14,13 +14,15 @@ const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no
  */
 function isPrime(int $num): bool
 {
-    $isNumberPrime = true;
+    if ($num === 0 || $num === 1) {
+        return false;
+    }
     for ($i = 2; $i < $num; $i++) {
         if ($num % $i === 0) {
-            $isNumberPrime = false;
+            return false;
         }
     }
-    return $isNumberPrime;
+    return true;
 }
 
 /**
@@ -34,7 +36,7 @@ function generateData(): array
     $lowLimit = 1;
     $upLimit = 100;
     $num = random_int($lowLimit, $upLimit);
-    $result['question'] = "Question: {$num}";
+    $result['question'] = $num;
     $result['correctAnswer'] = isPrime($num) ? 'yes' : 'no';
     return $result;
 }
@@ -48,5 +50,5 @@ function start(): void
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateData();
     }
-    Engine\startGame(DESCRIPTION, $data);
+    Engine\playGame(DESCRIPTION, $data);
 }

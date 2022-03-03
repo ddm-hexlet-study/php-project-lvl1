@@ -12,16 +12,15 @@ const NUMBER_OF_ROUNDS = 3;
  * @param String $description Description of the game
  * @param Array $data Array of questions and correct answers
  */
-function startGame(string $description, array $data): void
+function playGame(string $description, array $data): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line('Hello, %s!', $name);
     line('%s', $description);
     for ($i = 0; $i < NUMBER_OF_ROUNDS; $i++) {
-        $question = $data[$i]['question'];
-        $correctAnswer = $data[$i]['correctAnswer'];
-        line("%s", $question);
+        ['question' => $question, 'correctAnswer' => $correctAnswer] = $data[$i];
+        line("Question: %s", $question);
         $answer = prompt('Your answer');
         if ($answer != $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);

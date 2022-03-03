@@ -9,17 +9,15 @@ const DESCRIPTION = 'What number is missing in the progression?';
 /**
  * Creates digit progression.
  *
+ * @param Int $firstNumber First item of the progression
+ * @param Int $step Difference between neighboring items
  * @param Int $progressionLength Length of the progression
  * @return Array Progression
  */
-function createProgression(int $progressionLength): array
+function createProgression(int $firstNumber, int $step, int $progressionLength): array
 {
-    $lowLimit = 1;
-    $upLimit = 10;
     $progression = [];
-    $randomOffset = random_int($lowLimit, $upLimit);
-    $step = random_int($lowLimit, $upLimit);
-    for ($j = 0, $k = $randomOffset; $j < $progressionLength; $j++, $k += $step) {
+    for ($j = 0, $k = $firstNumber; $j < $progressionLength; $j++, $k += $step) {
         $progression[] = $k;
     }
     return $progression;
@@ -32,15 +30,18 @@ function createProgression(int $progressionLength): array
  */
 function generateData(): array
 {
-    $numberOfGames = 3;
+    $lowLimit = 1;
+    $upLimit = 10;
     $progressionLength = 10;
+    $firstNumber = random_int($lowLimit, $upLimit);
+    $step = random_int($lowLimit, $upLimit);
     $result = [];
-    $progression = createProgression($progressionLength);
+    $progression = createProgression($firstNumber, $step, $progressionLength);
     $controlIndex = array_rand($progression);
     $result['correctAnswer'] = $progression[$controlIndex];
     $progression[$controlIndex] = "..";
     $progressionStr = implode(' ', $progression);
-    $result['question'] = "Question: {$progressionStr}";
+    $result['question'] = $progressionStr;
     return $result;
 }
 
@@ -53,5 +54,5 @@ function start(): void
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateData();
     }
-    Engine\startGame(DESCRIPTION, $data);
+    Engine\playGame(DESCRIPTION, $data);
 }

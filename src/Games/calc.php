@@ -39,7 +39,7 @@ function generateData(): array
     $num1 = random_int($lowLimit, $upLimit);
     $num2 = random_int($lowLimit, $upLimit);
     $sign = $signs[array_rand($signs)];
-    $result['question'] = "Question: {$num1} {$sign} {$num2}";
+    $result['question'] = "{$num1} {$sign} {$num2}";
     $result['correctAnswer'] = makeCalculation($num1, $num2, $sign);
     return $result;
 }
@@ -53,5 +53,5 @@ function start(): void
     for ($i = 0; $i < Engine\NUMBER_OF_ROUNDS; $i++) {
         $data[$i] = generateData();
     }
-    Engine\startGame(DESCRIPTION, $data);
+    Engine\playGame(DESCRIPTION, $data);
 }
